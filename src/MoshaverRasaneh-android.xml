@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<application xmlns="http://ns.adobe.com/air/application/31.0">
+  <id>MoshaverRasaneh</id>
+  <versionNumber>1.4.1</versionNumber>
+  <filename>MoshaverRasaneh</filename>
+  <description/>
+  <name>مشاور رسانه</name>
+  <copyright/>
+  <initialWindow>
+    <content>MoshaverRasaneh.swf</content>
+    <systemChrome>standard</systemChrome>
+    <transparent>false</transparent>
+    <visible>true</visible>
+    <fullScreen>false</fullScreen>
+    <aspectRatio>portrait</aspectRatio>
+    <renderMode>gpu</renderMode>
+    <autoOrients>true</autoOrients>
+    <maximizable>true</maximizable>
+    <minimizable>true</minimizable>
+    <resizable>true</resizable>
+  </initialWindow>
+  <icon>
+    <image16x16>AppIconsForPublish/16.png</image16x16>
+    <image29x29>AppIconsForPublish/29.png</image29x29>
+    <image32x32>AppIconsForPublish/32.png</image32x32>
+    <image36x36>AppIconsForPublish/36.png</image36x36>
+    <image40x40>AppIconsForPublish/40.png</image40x40>
+    <image48x48>AppIconsForPublish/48.png</image48x48>
+    <image50x50>AppIconsForPublish/50.png</image50x50>
+    <image57x57>AppIconsForPublish/57.png</image57x57>
+    <image58x58>AppIconsForPublish/58.png</image58x58>
+    <image60x60>AppIconsForPublish/60.png</image60x60>
+    <image72x72>AppIconsForPublish/72.png</image72x72>
+    <image75x75>AppIconsForPublish/75.png</image75x75>
+    <image76x76>AppIconsForPublish/76.png</image76x76>
+    <image80x80>AppIconsForPublish/80.png</image80x80>
+    <image87x87>AppIconsForPublish/87.png</image87x87>
+    <image100x100>AppIconsForPublish/100.png</image100x100>
+    <image114x114>AppIconsForPublish/114.png</image114x114>
+    <image120x120>AppIconsForPublish/120.png</image120x120>
+    <image128x128>AppIconsForPublish/128.png</image128x128>
+    <image144x144>AppIconsForPublish/144.png</image144x144>
+    <image152x152>AppIconsForPublish/152.png</image152x152>
+    <image167x167>AppIconsForPublish/167.png</image167x167>
+    <image180x180>AppIconsForPublish/180.png</image180x180>
+    <image512x512>AppIconsForPublish/512.png</image512x512>
+    <image1024x1024>AppIconsForPublish/1024.png</image1024x1024>
+  </icon>
+  <android>
+    <manifestAdditions><![CDATA[
+<manifest android:installLocation="auto">
+  <uses-sdk android:minSdkVersion="9" android:targetSdkVersion="22"/>
+  <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+  <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+  <uses-permission android:name="android.permission.GET_TASKS"/>
+  <application android:hardwareAccelerated="true" android:enabled="true">
+    <receiver android:name="com.milkmangames.extensions.android.push.GCMBroadcastReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+      <intent-filter>
+        <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+        <action android:name="com.google.android.c2dm.intent.REGISTRATION"/>
+        <category android:name="air.com.mteamapps.Besharat"/>
+      </intent-filter>
+    </receiver>
+    <service android:name="com.milkmangames.extensions.android.push.GCMIntentService"/>
+    <activity android:name="com.distriqt.extension.pdfreader.pdfview.activities.OpenPDFActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+    <provider android:name="android.support.v4.content.FileProvider" android:authorities="air.com.mteamapps.Besharat.dt_files" android:grantUriPermissions="true" android:exported="false">
+      <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/distriqt_paths"/>
+    </provider>
+    <provider android:name="android.support.v4.content.FileProvider" android:authorities="air.com.mteamapps.Besharat.fileprovider" android:grantUriPermissions="true" android:exported="false">
+      <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/distriqt_share_paths"/>
+    </provider>
+  </application>
+  <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+  <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+  <uses-permission android:name="android.permission.INTERNET"/>
+  <uses-permission android:name="android.permission.WAKE_LOCK"/>
+  <uses-permission android:name="android.permission.VIBRATE"/>
+  <permission android:name="air.com.mteamapps.Besharat.permission.C2D_MESSAGE" android:protectionLevel="signature"/>
+  <uses-permission android:name="air.com.mteamapps.Besharat.permission.C2D_MESSAGE"/>
+  <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
+  <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+  <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+  <uses-permission android:name="android.permission.CAMERA"/>
+</manifest>
+]]></manifestAdditions>
+    <containsVideo>true</containsVideo>
+  </android>
+  <iPhone>
+    <InfoAdditions><![CDATA[
+<key>NSPhotoLibraryUsageDescription</key>
+<string>Access to photo library is required to save images.</string>
+<key>LSApplicationQueriesSchemes</key>
+<array>
+  <string>instagram</string>
+  <string>whatsapp</string>
+  <string>telegram</string>
+</array>
+<key>UIDeviceFamily</key>
+<array>
+  <string>1</string>
+  <string>2</string>
+</array>
+<key>NSAppTransportSecurity</key>
+<dict>
+  <key>NSAllowsArbitraryLoads</key>
+  <true/>
+</dict>
+]]></InfoAdditions>
+    <Entitlements><![CDATA[
+<key>application-identifier</key>
+<string>null.com.mteamapps.Besharat</string>
+<key>aps-environment</key>
+<string>development</string>
+<key>get-task-allow</key>
+<true/>
+<key>keychain-access-groups</key>
+<array>
+  <string>null.com.mteamapps.Besharat</string>
+</array>
+]]></Entitlements>
+    <requestedDisplayResolution>high</requestedDisplayResolution>
+  </iPhone>
+  <customUpdateUI>false</customUpdateUI>
+  <allowBrowserInvocation>false</allowBrowserInvocation>
+  <extensions>
+    <extensionID>com.distriqt.androidsupport.V4</extensionID>
+    <extensionID>com.distriqt.Core</extensionID>
+    <extensionID>com.distriqt.MediaPlayer</extensionID>
+    <extensionID>com.distriqt.PDFReader</extensionID>
+    <extensionID>com.distriqt.Share</extensionID>
+    <extensionID>com.janumedia.ane.pdfreader</extensionID>
+    <extensionID>com.milkmangames.extensions.EasyPush</extensionID>
+  </extensions>
+</application>
