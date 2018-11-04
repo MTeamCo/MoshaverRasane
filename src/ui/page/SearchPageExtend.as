@@ -8,7 +8,9 @@ package ui.page
 	import contents.Contents;
 	import contents.LinkData;
 	import contents.PageData;
+	import contents.alert.Alert;
 	import contents.interFace.DisplayPageInterface;
+	import contents.interFace.PageContentBaseClass;
 	
 	import dataManager.GlobalStorage;
 	
@@ -30,7 +32,8 @@ package ui.page
 	import popForm.PopMenuContenDisplay;
 	import popForm.PopMenuContent;
 	import popForm.PopMenuEvent;
-	public class SearchPageExtend extends MovieClip
+
+	public class SearchPageExtend extends PageContentBaseClass
 	{
 		protected var dynamicList:PopMenuContenDisplay ;
 		
@@ -84,6 +87,8 @@ package ui.page
 			resetMC = Obj.get("reset_mc",this);
 			
 			searchMC = Obj.getAllChilds("search_mc2",this)[0];
+			searchMC.buttonMode = true ;
+			searchMC.addEventListener(MouseEvent.CLICK,searchFunction);
 			/*if(GlobalStorage.load(serachTypeId)!=null)
 			{
 			searchType = GlobalStorage.load(serachTypeId); 
@@ -100,7 +105,11 @@ package ui.page
 			
 			dynamicList = Obj.findThisClass(PopMenuContenDisplay,this);
 			buttonsContainer = Obj.get("search_buttons_mc2",this);
+			userSearchMC = Obj.get("users_mc2",buttonsContainer);
+			photoSearchMC = Obj.get("images_mc2",buttonsContainer);
+			newsSearchMC = Obj.get("news_mc2",buttonsContainer);
 			
+			//userSearchMC.addEventListener(MouseEvent.CLICK,chageTheSearchTypeToUserSearch);
 			if(resetMC)
 			{
 				resetMC.addEventListener(MouseEvent.CLICK,resetFields);
@@ -133,8 +142,10 @@ package ui.page
 			}
 		}
 		
-		public function setUp(pageData:PageData):void
+		override public function setUp(pageData:PageData):void
 		{
+			saveCurrentSearchText();
+			searchType = 1 ;
 			inputTF = Obj.get("input_txt2",_frame_on_lang);
 			inputTF.addEventListener(Event.CHANGE,controlTextFieldForSearchButton);
 			link_photo_search_result = pageData.links2[0] ;
@@ -145,14 +156,11 @@ package ui.page
 			}
 			
 			dynamicList.height = PicConst.pagesRect.height-dynamicList.y ;
-			inputTF.text='hi';
+			inputTF.text='نام مورد نظر خود را وارد کنید';
 			FarsiInputCorrection.setUp(inputTF,null,true,true,false,true,true,true,ReturnKeyLabel.SEARCH,searchFunction);
 			
-			userSearchMC = Obj.get("users_mc",buttonsContainer);
-			photoSearchMC = Obj.get("images_mc",buttonsContainer);
-			newsSearchMC = Obj.get("news_mc",buttonsContainer);
 			
-			userSearchMC.addEventListener(MouseEvent.CLICK,chageTheSearchTypeToUserSearch);
+			
 			photoSearchMC.addEventListener(MouseEvent.CLICK,changeTheSearchTypeToImageSearch);
 			
 			if(newsSearchMC)
@@ -160,8 +168,7 @@ package ui.page
 				newsSearchMC.addEventListener(MouseEvent.CLICK,searchForNews);
 			}
 			
-			searchMC.buttonMode = true ;
-			searchMC.addEventListener(MouseEvent.CLICK,searchFunction);
+			
 			
 			setTheButtonInterface();
 			
@@ -244,14 +251,15 @@ package ui.page
 			setTheButtonInterface();
 		}
 		
-		protected function chageTheSearchTypeToUserSearch(event:MouseEvent):void
+		/*protected function chageTheSearchTypeToUserSearch(event:MouseEvent):void
 		{
 			// TODO Auto-generated method stub
 			trace("Change the search type to User seraching");
+			//Alert.show('click');
 			saveCurrentSearchText();
 			searchType = 1 ;
-			setTheButtonInterface();
-		}
+			//setTheButtonInterface();
+		}*/
 		
 		
 		protected function unLoad(event:Event):void
