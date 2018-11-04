@@ -1,0 +1,958 @@
+﻿<app>
+	<!--MosabegheAx2 - AroosGram
+	
+	
+	modifed data       image tag need
+	94/06/16
+	
+	
+	
+	-->
+	
+	<!--debug/-->
+	
+	
+	<page id="home">
+		<music></music>
+		<type>home</type>
+		<title>home_l</title>
+		<image></image>
+		<content  w="768" h="793"></content>
+		<links>
+			<link level="1" name="صفحه اصلی" id="home" icon="Data/images/menu/khane.png"/>
+			<link level="1" name="ثبت نام" id="register_page" icon="Data/images/menu/2.png"/>
+			<link level="1" name="تماس با ما" id="tamas_page" icon="Data/images/menu/phone-call2.png"/>
+			<link level="1" name="درباره ما" id="about_page" icon="Data/images/menu/phone-call2.png"/>
+			<link level="1" name="خبرگزاری ها" id="" icon="Data/images/menu/world-news2.png"/>
+			<link level="1" name="خبرنگاران" id="" icon="Data/images/menu/world-news2.png"/>
+			<link level="1" name="درخواست خبرگزاری" id="contact_page" icon="Data/images/menu/world-news2.png"/>
+			<link level="1" name="درباره توسعه دهنده" id="developer_static_page" icon="Data/images/menu/khane.png"/>
+			
+		</links>
+		<links>
+			<link level="1" name="صفحه اصلی" id="home" icon="Data/images/menu/khane.png"/>
+			<link level="1" name="پروفایل" id="profile_page" icon="Data/images/menu/2.png"/>
+			<link level="1" name="تماس با ما" id="tamas_page" icon="Data/images/menu/phone-call2.png"/>
+			<link level="1" name="درباره ما" id="about_page" icon="Data/images/menu/phone-call2.png"/>
+			<link level="1" name="خبرگزاری ها" id="" icon="Data/images/menu/world-news2.png"/>
+			<link level="1" name="خبرنگاران" id="" icon="Data/images/menu/world-news2.png"/>
+			<link level="1" name="درخواست خبرگزاری" id="contact_page" icon="Data/images/menu/world-news2.png"/>
+			<link level="1" name="درباره توسعه دهنده" id="developer_static_page" icon="Data/images/menu/khane.png"/>
+		</links>
+	</page>
+	
+	<page id="azmoon_answer_list_page">
+			<type>lmsPack.ui.pages.azmoon.MyAzmoonPage</type>
+			<title>نتایج آزمون ها</title>
+			<content align="1" x='' y='' w='750'>0</content>
+			<images>
+			</images>
+			<links>
+				<link level="-1" name="آزمون" id="azmoon_answerd_question_list_page" icon=""/>
+			</links>
+	</page>
+	
+		<page id="azmoon_answerd_question_list_page">
+				<type>lmsPack.ui.pages.azmoon.MyAzmoonAnswers</type>
+				<title>پاسخ های داده شده</title>
+				<content align="1" x='' y='' w='750'>0</content>
+		</page>
+
+	
+	
+		<page id="khabargozariha_page">
+			<music></music>
+			<type>BaseGroupLoader2</type>
+			<title>خبرگزاری ها</title>
+			<content>47</content>
+			<links>
+				<link level="-1" name="لیست" id="news_page_reverted"/>
+			</links>
+		</page>
+	
+	
+	
+		<page id="khabarnegaran_page">
+				<type>ui.page.SearchPageExtend</type>
+				<title>خبرنگاران</title>
+				<image></image>
+				<content></content>
+				<links></links>
+				<links>
+					<!--0: searched photo s page-->
+					<link level="" name="" id="searched_images_page" icon=""/>
+					<!--1: searched users page-->
+					<link level="" name="" id="searched_users_page" icon=""/>
+					<!--1: searched news page-->
+					<link level="" name="" id="searched_news_page" icon=""/>
+				</links>
+			</page>
+			
+			
+		
+			
+			
+
+		<page id="ExitAPP">
+			<type>Page.Exitpage</type>
+			<title></title>
+			<content align="1" x='' y='' w='750'></content>
+			<images>
+			</images>
+		</page>
+	
+	
+	<page id="darbareTarh_page">
+			<type>AllKhabarContentPage1</type>
+			<title></title>
+			<content align="1" x='' y='' w='750'>569</content>
+			<images>
+			</images>
+	</page>
+	
+	
+		<page id="jadvalpakhsh_page">
+			<type>AllKhabarContentPage1</type>
+			<title>جدول پخش</title>
+			<content align="1" x='' y='' w='750'>591</content>
+			<images>
+			</images>
+	</page>
+	
+	<page id="rahnama_page">
+			<type>AllKhabarContentPage1</type>
+			<title></title>
+			<content align="1" x='' y='' w='750'>588</content>
+			<images>
+			</images>
+	</page>
+	
+	
+	
+	
+		<page id="EmtiazMan_page">
+			<type>AllKhabarContentPage1</type>
+			<title>امتیاز من</title>
+			<content align="1" x='' y='' w='750'>575</content>
+			<images>
+			</images>
+	</page>
+	
+	<page id="EmtiazMan_page">
+			<type>AllKhabarContentPage1</type>
+			<title>امتیاز من</title>
+			<content align="1" x='' y='' w='750'>575</content>
+			<images>
+			</images>
+	</page>
+	
+	
+
+	
+	<page id="jadvalemtiyazat_page">
+			<type>AllKhabarContentPage1</type>
+			<title></title>
+			<content align="1" x='' y='' w='750'>571</content>
+			<images>
+			</images>
+	</page>
+	
+	<page id="Eshterakgozari_page">
+			<type>AllKhabarContentPage1</type>
+			<title></title>
+			<content align="1" x='' y='' w='750'>570</content>
+			<images>
+			</images>
+	</page>
+	
+	
+	<page id="Pakhshzendeh_page">
+			<type>Page.PakhshZende</type>
+			<title></title>
+			<content align="1" x='' y='' w='750'></content>
+			<images>
+			</images>
+	</page>
+	
+	
+	<page id="Darkhastgovahiname_page">
+			<type>Page.Emailsendextend</type>
+			<title>درخواست گواهینامه</title>
+			<content align="1" x='' y='' w='750'></content>
+			<images>
+			</images>
+	</page>
+	
+	<page id="govahiname_page">
+			<type>Page.Govahiname</type>
+			<title>گواهی نامه</title>
+			<content align="1" x='' y='' w='750'></content>
+			<images>
+			</images>
+	</page>
+
+	
+	<page id="contact_page">
+			<type>ui.page.DarkhastKHabargozari</type>
+			<title>درخواست خبرگزاری</title>
+			<content align="1" x='' y='' w='750'>0</content>
+			<images>
+			</images>
+	</page>
+	
+	
+	<page id="learning_page">
+		<music></music>
+		<type>-</type>
+		<title>-</title>
+		<image></image>
+		<links>
+				<link level="1" name="ویژه سفیران سلامت خانوار" id="khanevadeh_page" icon="Data/images/icon3.png"/>
+				<link level="1" name="ویژه سفیران سلامت دانشجو، طلبه و سرباز" id="javanan_page" icon="Data/images/icon2.png"/>
+				<!--<link level="1" name="ویژه سفیران سلامت دانش آموز" id="danesh_amooz_page" icon="Data/images/icon1.png"/>-->
+				<link level="1" name="ویژه زنان باردار و والدین جوان" id="bardar_page" icon="Data/images/icon4.png"/>
+		</links>
+	</page>
+	
+		<page id="learning_azmoon_page">
+			<music></music>
+			<type>DynamicLinks2IconPerLine</type>
+			<title>دوره ها و آزمون ها</title>
+			<image></image>
+			<links>
+					<link level="-1" name="ویژه سفیران سلامت خانوار" id="khanevadeh_azmoon_page" icon="Data/images/icon3.png"/>
+					<link level="-1" name="ویژه سفیران سلامت دانشجو، طلبه و سرباز" id="javanan_azmoon_page" icon="Data/images/icon2.png"/>
+					<!--<link level="-1" name="ویژه سفیران سلامت دانش آموز" id="danesh_amooz_azmoon_page" icon="Data/images/icon1.png"/>-->
+					<link level="-1" name="ویژه زنان باردار و والدین جوان" id="bardar_azmoon_page" icon="Data/images/icon4.png"/>
+			</links>
+		</page>
+	
+	
+	
+			<page id="Azmonha_page">
+				<music></music>
+				<type>lmsPack.ui.pages.home.BaseGroupLoader</type>
+				<title></title>
+				<content x="1">5</content><!--Add x="1" to make azmoons activate-->
+				<links>
+					<link level="-1" name="لیست" id="azmoonp_list_page"/>
+				</links>
+			</page>
+	
+	
+		<page id="azmoonp_list_pageAsli">
+			<type>Page.Mosabeghat</type>
+			<title>لیست مسابقات</title>
+			<content align="1" x='' y='' w='750'>0</content>
+			<images>
+			</images>
+			<links>
+			</links>
+			<links>
+			</links>
+	</page>
+	
+	
+	
+	
+			<page id="azmooRozane_list_page">
+			<type>Page.AzmoonRozaneh</type>
+			<title>مسابقات روزانه</title>
+			<content align="1" x='' y='' w='750'>0</content>
+			<images>
+			</images>
+			<links>
+				<link level="-1" name="آزمون" id="azmoon_page" icon="Data/images/menu/01.png"/>
+			</links>
+	</page>
+	
+	
+	
+		<page id="azmoonp_list_page">
+			<type>Page.AzmoonListFasli</type>
+			<title>مسابقات فصلی</title>
+			<content align="1" x='' y='' w='750'>0</content>
+			<images>
+			</images>
+			<links>
+				<link level="-1" name="آزمون" id="azmoon_page" icon="Data/images/menu/01.png"/>
+			</links>
+	</page>
+	
+		<page id="azmoonp_list_page2">
+			<type>Page.AzmoonSoureha</type>
+			<title>مسابقات سوره ای</title>
+			<content align="1" x='' y='' w='750'>0</content>
+			<images>
+			</images>
+
+			<links>
+				<link level="-1" name="آزمون" id="azmoon_page" icon="Data/images/menu/01.png"/>
+			</links>
+	</page>
+		
+
+		<page id="azmoon_page">
+				<type>lmsPack.ui.pages.azmoon.AzmoonPage</type>
+				<title></title>
+				<content align="1" x='' y='' w='750'>0</content>
+				<images>
+				</images>
+				<links>
+				</links>
+		</page>
+	
+	
+	
+	
+	
+	
+	
+	
+	<!-->*******************************************************-->
+	
+	
+		<page id="Questions">
+			<type>AmoozeshPezeshkan.ui.pages.GetQuestions</type>
+			<title>پیام ها</title>
+			<image></image>
+			<content></content>
+			<links></links>
+			<links>
+				<link level="-1" name="" id="Questions_View" icon=""/>
+			</links>
+		</page>
+		
+		
+		<page id="Questions2">
+			<type>Page.PasokhGovahi</type>
+			<title>گواهینامه های من</title>
+			<image></image>
+			<content></content>
+			<links></links>
+			<links>
+				<link level="-1" name="" id="Questions_View" icon=""/>
+			</links>
+		</page>
+		
+		
+			<page id="Questions_View">
+				<type>AmoozeshPezeshkan.ui.pages.GetQuestionsView</type>
+				<title>نمایش پیام ها</title>
+				<content align="1" x='' y='' w='750'></content>
+				<images>
+				</images>
+			</page>
+	
+		<page id="danesh_amooz_page">
+			<music></music>
+			<type>lmsPack.ui.pages.home.BaseGroupLoader</type>
+			<title>ویژه سفیران سلامت دانش آموز</title>
+			<content>5</content>
+			<links>
+				<link level="-1" name="لیست" id="news_page_reverted"/>
+			</links>
+		</page>
+			<page id="danesh_amooz_azmoon_page">
+				<music></music>
+				<type>lmsPack.ui.pages.home.BaseGroupLoader</type>
+				<title>ویژه سفیران سلامت دانش آموز</title>
+				<content x="1">5</content><!--Add x="1" to make azmoons activate-->
+				<links>
+					<link level="-1" name="لیست" id="news_page_reverted"/>
+				</links>
+			</page>
+			
+		<page id="bardar_page">
+			<music></music>
+			<type>lmsPack.ui.pages.home.BaseGroupLoader</type>
+			<title>ویژه زنان باردار و والدین جوان</title>
+			<content>1003</content>
+			<links>
+				<link level="-1" name="لیست" id="news_page_reverted"/>
+			</links>
+		</page>	
+			<page id="bardar_azmoon_page">
+				<music></music>
+				<type>lmsPack.ui.pages.home.BaseGroupLoader</type>
+				<title>ویژه زنان باردار و والدین جوان</title>
+				<content x="1">1003</content><!--Add x="1" to make azmoons activate-->
+				<links>
+					<link level="-1" name="لیست" id="news_page_reverted"/>
+				</links>
+			</page>
+		
+		<page id="javanan_page">
+			<music></music>
+			<type>lmsPack.ui.pages.home.BaseGroupLoader</type>
+			<title>ویژه سفیران سلامت دانشجو، طلبه و سرباز</title>
+			<content>4</content>
+			<links>
+				<link level="-1" name="لیست" id="news_page_reverted"/>
+			</links>
+		</page>
+			<page id="javanan_azmoon_page">
+				<music></music>
+				<type>lmsPack.ui.pages.home.BaseGroupLoader</type>
+				<title>ویژه سفیران سلامت دانشجو، طلبه و سرباز</title>
+				<content x="1">4</content><!--Add x="1" to make azmoons activate-->
+				<links>
+					<link level="-1" name="لیست" id="news_page_reverted"/>
+				</links>
+			</page>
+			
+				<page id="Javayez_page">
+			<music></music>
+			<type>lmsPack.ui.pages.home.BaseGroupLoader</type>
+			<title></title>
+			<content></content>
+			<links>
+				<link level="-1" name="لیست" id="NextPage"/>
+			</links>
+		</page>
+		
+		
+		
+		
+			<page id="NextPage">
+			<type>AllKhabarContentPage1</type>
+			<title></title>
+			<content align="1" x='' y='' w='750'></content>
+			<images>
+			</images>
+	</page>
+		
+		
+	
+		<page id="akhbarha_page">
+			<type>LMSNewsPage_reverted_default</type>
+			<title></title>
+			<content></content>
+		</page>
+		
+		
+		<page id="news_page_reverted">
+		<type>NewsPageExtend</type>
+		<title></title>
+		<content></content>
+	</page>
+	
+	
+	
+		<page id="akhbarfanavari_page">
+		<type>NewsPageExtend</type>
+		<title>فناوری</title>
+		<content>217</content>
+	</page>
+	
+	<page id="akhbartajasomi_page">
+		<type>NewsPageExtend</type>
+		<title>تجسمی</title>
+		<content>216</content>
+	</page>
+	<page id="akhbarmusic_page">
+		<type>NewsPageExtend</type>
+		<title>موسیقی</title>
+		<content>218</content>
+	</page>
+	<page id="akhbarcinema_page">
+		<type>NewsPageExtend</type>
+		<title>سینما</title>
+		<content>219</content>
+	</page>
+			<page id="khanevadeh_azmoon_page">
+				<music></music>
+				<type>lmsPack.ui.pages.home.BaseGroupLoader</type>
+				<title>ویژه سفیران سلامت خانوار</title>
+				<content x="1">3</content><!--Add x="1" to make azmoons activate-->
+				<links>
+					<link level="-1" name="لیست" id="news_page_reverted"/>
+				</links>
+			</page>
+	
+		
+	
+	
+	<page id="channels_list">
+		<type>ofogh.ui.pages.chanels.JustChanelPage</type>
+		<title>کانال ها</title>
+		<image></image>
+		<content></content>
+		<links></links>
+		<links>
+			<link level="-1" name="لیست مسابقات انتخابی" id="news_category_page" icon=""/>
+		</links>
+	</page>
+	
+		<page id="news_category_page">
+			<type>ofogh.ui.pages.chanels.JustContestsPage</type>
+			<title>کانال ها</title>
+			<image></image>
+			<content></content>
+			<links></links>
+			<links>
+				<link level="-1" name="محتوای مسابقه" id="corrent_contest_gallery_page" icon=""/>
+			</links>
+		</page>
+	
+	<page id="best_news_page">
+		<type>ofogh.ui.pages.newsList.NewsListMostLikes</type>
+		<title>برترین خبر ها</title>
+		<image></image>
+		<content></content>
+	</page>
+	
+	<page id="recent_news_page">
+		<type>LMSNewsPage1</type>
+		<title>اخبار</title>
+		<content>159</content>
+	</page>
+	
+	
+	<page id="emtiazman_page">
+		<type>Page.EmtiazatMan</type>
+		<title></title>
+		<content></content>
+	</page>
+	
+	<page id="share_page">
+		<type>Page.SharePage</type>
+		<title></title>
+		<content></content>
+	</page>
+	
+	<page id="redirect_page">
+		<type>AllKhabarContentPage1</type>
+		<title></title>
+		<content></content>
+	</page>
+	
+	
+	<page id="barande_page">
+		<type>DynamicNewsList2</type>
+		<title>برندگان</title>
+		<content>220</content>
+	</page>
+	
+
+	
+	<page id="avmeltarh_page">
+		<type>Page.AvamelTarh</type>
+		<title>همراهان با طرح</title>
+		<content></content>
+	</page>
+	
+	
+	
+	<page id="javayeztarh_page">
+		<type>DynamicNewsList3</type>
+		<title>جوایزطرح</title>
+		<content>229</content>
+	</page>
+	
+	
+	<page id="news_page">
+		<type>LMSNewsPage1</type>
+		<title></title>
+		<content></content>
+	</page>
+	
+	
+	
+	<page id="news_page_reverted_on_zaban">
+		<type>LMSNewsPage_reverted_with_zaban_text</type>
+		<title></title>
+		<content></content>
+	</page>
+	
+	<page id="recent_news_page_ruidad">
+		<type>LMSNewsPage1</type>
+		<title>رویداد ها</title>
+		<content>160</content>
+	</page>
+	
+	<page id="shahrdari_sites">
+		<type>lmsPack.ui.pages.LinkList</type>
+		<title>پیوند ها</title>
+		<image></image>
+		<content></content>
+		<links>
+			<link level="-1" name="معاونت توسعه منابع انسانی" id="http://hrd.tehran.ir/" icon="Data/images/links/hrd.png"/>
+			<link level="-1" name="سازمان فناوری اطلاعات و ارتباطات" id="http://tmicto.tehran.ir/" icon="Data/images/links/tmicto.png"/>
+			<link level="-1" name="سامانه 1888" id="http://1888.tehran.ir/" icon="Data/images/links/1888.png"/>
+			<link level="-1" name="بانک شهر" id="http://shahr-bank.ir/" icon="Data/images/links/shahr.png"/>
+			<link level="-1" name="معاونت توسعه مدیریت ریاست جمهوری" id="http://mdhc.ir/portal/home/" icon="Data/images/links/mdhc.png"/>
+			<link level="-1" name="انجمن مدیریت منابع انسانی" id="http://hrmsociety.ir/" icon="Data/images/links/hrm.png"/>
+			<link level="-1" name="انجمن ارزیابی تعالی و توسعه" id="http://istd.ir/" icon="Data/images/links/istd.png"/>
+		</links>
+	</page>
+	
+		
+		<page id="Questions">
+			<type>AmoozeshPezeshkan.ui.pages.GetQuestions</type>
+			<title>پیام ها</title>
+			<image></image>
+			<content></content>
+			<links></links>
+			<links>
+				<link level="-1" name="" id="Questions_View" icon=""/>
+			</links>
+		</page>
+		
+			<page id="Questions_View">
+				<type>AmoozeshPezeshkan.ui.pages.GetQuestionsView</type>
+				<title>نمایش پیام ها</title>
+				<content align="1" x='' y='' w='750'></content>
+				<images>
+				</images>
+			</page>
+		
+		
+	
+			<page id="news_category_page">
+				<type>ofogh.ui.pages.newsCategroyPage.NewsCatPage</type>
+				<title></title><!--Dynamic title-->
+				<image></image><!--Dynamic images-->
+				<content></content><!--Dynamic contents-->
+			</page>
+			<page id="news_content_page1">
+				<type>Tabnak.ui.pages.AllKhabarContentPage</type>
+				<title></title><!--Dynamic title-->
+				<image></image><!--Dynamic images-->
+				<content></content><!--Dynamic contents-->
+				<links></links>
+				<links>
+					<link level="" name="" id="news_content_comment_page" icon=""/>
+				</links>
+			</page>
+	
+			<page id="news_content_page">
+				<type>Tabnak.ui.pages.AllKhabarContentPage</type>
+				<title></title><!--Dynamic title-->
+				<image></image><!--Dynamic images-->
+				<content></content><!--Dynamic contents-->
+				<links></links>
+				<links>
+					<link level="" name="" id="news_content_comment_page" icon=""/>
+				</links>
+			</page>
+	
+				<page id="news_content_comment_page">
+					<type>ofogh.ui.pages.newsComments.NewsCommentsPage</type>
+					<title></title><!--Dynamic title-->
+					<content></content><!--Dynamic contents-->
+					<links>
+						<!--0: opponnent profile page-->
+						<link level="" name="" id="opponent_profile_page" icon=""/>
+					</links>
+				</page>
+	
+			<page id="help_page">
+				<type>OnlineContent1</type>
+				<title>help_title_l</title>
+				<image></image>
+				<content>144</content>
+				<links></links>
+				<links>
+				</links>
+			</page>
+	
+			<page id="tamas_page">
+				<type>OnlineContent1</type>
+				<title>تماس با ما</title>
+				<image></image>
+				<content>142</content>
+				<links></links>
+				<links>
+				</links>
+			</page>
+
+			<page id="about_page">
+				<type>OnlineContentWithVersion</type>
+				<title>درباره ما</title>
+				<image></image>
+				<content>141</content>
+				<links></links>
+				<links>
+				</links>
+			</page>
+	
+			<page id="winners_page">
+				<type>Aroos.ui.pages.winners.WinnerList</type>
+				<title>winners_title_l</title>
+				<image></image>
+				<content></content>
+				<links></links>
+				<links>
+				</links>
+			</page>
+	
+			<page id="advetise_page">
+				<type>Aroos.ui.pages.advertisment.AdvetismentMainPage</type>
+				<title>advertise_title_l</title>
+				<image></image>
+				<content></content>
+				<links></links>
+				<links>
+					<!--0: Single advertisment category on one page-->
+					<link level="" name="" id="advetise_full_page" icon=""/>
+					<!--1: Single advertisment prevew-->
+					<link level="" name="" id="single_advertise_page" icon=""/>
+				</links>
+			</page>
+	
+				<page id="advetise_full_page">
+					<type>Aroos.ui.pages.advertisment.SelectedAdvertisePage</type>
+					<title></title><!--This is a dynamic title-->
+					<image></image>
+					<content></content>
+					<links></links>
+					<links>
+						<!--Single advertisment prevew-->
+						<link level="" name="" id="single_advertise_page" icon=""/>
+					</links>
+				</page>
+	
+					<page id="single_advertise_page">
+						<type>Aroos.ui.pages.advertisment.AdvertisePrevew</type>
+						<title></title><!--This is a dynamic title-->
+						<image></image>
+						<content></content>
+						<links></links>
+						<links>
+						</links>
+					</page>
+	
+			<page id="search_page">
+				<type>Aroos.ui.pages.search.SearchPage</type>
+				<title>search_l</title>
+				<image></image>
+				<content></content>
+				<links></links>
+				<links>
+					<!--0: searched photo s page-->
+					<link level="" name="" id="searched_images_page" icon=""/>
+					<!--1: searched users page-->
+					<link level="" name="" id="searched_users_page" icon=""/>
+					<!--1: searched news page-->
+					<link level="" name="" id="searched_news_page" icon=""/>
+				</links>
+			</page>
+	
+				<page id="searched_news_page">
+					<type>ofogh.ui.pages.newsSearched.NewsSearchedPage</type>
+					<title></title>
+					<image></image>
+					<content></content>
+					<links>
+					</links>
+				</page>
+	
+				<page id="searched_images_page">
+					<type>Aroos.ui.pages.search.SearchPhotoResultPage</type>
+					<title>search2_l</title>
+					<image></image>
+					<content></content>
+					<links>
+					</links>
+				</page>
+	
+				<page id="searched_users_page">
+					<type>Aroos.ui.pages.search.SearchPhotographersResultPage</type>
+					<title>search2_l</title>
+					<image></image>
+					<content></content>
+					<links></links>
+					<links>
+						<!--0: opponnent profile page-->
+						<link level="" name="" id="opponent_profile_page" icon=""/>
+					</links>
+				</page>
+		
+			<page id="contest_list_page">
+				<type>picContest.ui.pages.contestList.ActiveContestOnly</type>
+				<title>contest_list_title_l</title>
+				<image></image>
+				<content></content>
+				<links>
+				</links>
+				<links>
+					<!--0: Contest photos-->
+					<link level="" name="" id="corrent_contest_gallery_page" icon=""/>
+				</links>
+			</page>
+	
+				<page id="corrent_contest_gallery_page">
+					<type>Aroos.ui.pages.contestGallery.ContestGalleryPage</type>
+					<title></title><!--This is a dynamic title-->
+					<image></image>
+					<content></content>
+					<links>
+					</links>
+					<links>
+						<!--This will generate by the GalleryPage and using the config.xml to detect image page from its type-->
+						<link level="" name="" id="online_image_page" icon=""/>
+					</links>
+				</page>
+	
+					<page id="online_image_page">
+						<type>Aroos.ui.pages.onlineImagePreview.OnlineImagePreviewPage</type>
+						<title></title><!--This is a dynamic title-->
+						<image></image>
+						<content></content>
+						<links>
+						</links>
+						<links>
+							<!--0: Image comments page-->
+							<link level="" name="" id="comments_page" icon=""/>
+							<!--1: opponnent profile page-->
+							<link level="" name="" id="opponent_profile_page" icon=""/>
+						</links>
+					</page>
+	
+						<page id="comments_page">
+							<type>Aroos.ui.pages.comments.CommentPage</type>
+							<title></title><!--This is a dynamic title-->
+							<image></image>
+							<content></content>
+							<links>
+								<!--0: opponnent profile page-->
+								<link level="" name="" id="opponent_profile_page" icon=""/>
+							</links>
+							<links>
+							</links>
+						</page>
+	
+						<page id="opponent_profile_page">
+							<type>Aroos.ui.pages.opponentProfile.OpponentProfilePage</type>
+							<title>opponent_profile_title</title>
+							<image></image>
+							<content></content>
+							<links>
+							</links>
+							<links>
+							</links>
+						</page>
+						
+						
+		<page id="captured_page">
+			<type>Aroos.ui.pages.CapturePage</type>
+			<title>capture_page_l</title>
+			<image></image>
+			<content></content>
+			<links>
+				<link level="-1" name="" id="image_editor_page" icon=""/>
+			</links>
+		</page>
+	
+			<page id="image_editor_page">
+				<scroll w="768" h="1000" effect="false"/>
+				<type>Aroos.ui.pages.imagePreview.ImagePrevew</type>
+				<title>image_editor_page_l</title>
+				<image></image>
+				<content></content>
+				<links></links>
+				<links>
+					<!--0: local gallery on the -->
+					<link level="" name="" id="local_storage_page" icon=""/>
+					<!--1: Register befor sendign photo-->
+					<link level="" name="" id="login_page" icon=""/>
+					<!--2: open the photo gallery-->
+					<link level="-2" name="" id="corrent_contest_gallery_page" icon=""/>
+				</links>
+			</page>
+	
+		
+		
+			<page id="profile_page">
+				<type>Aroos.ui.pages.profile.UserProfile</type>
+				<title>حساب کاربری</title>
+				<image></image>
+				<content></content>
+				<links>
+					<!--0: avatar editor page-->
+					<link level="-1" name="" id="avatar_editor_page" icon=""/>
+					<!--1: Edit button-->
+					<link level="-1" name="" id="edit_profile_page" icon=""/>
+					<!--2: Exit button-->
+					<link level="1" name="" id="login_page" icon=""/>
+					<!--3: Exit button-->
+					<link level="-1" name="" id="local_storage_page" icon=""/>
+				</links>
+			</page>
+		
+				<page id="local_storage_page">
+					<type>picContest.ui.pages.localGallery.LocalGalleryPage</type>
+					<title>local_storage_l</title>
+					<image></image>
+					<content></content>
+					<links></links>
+					<links>
+					</links>
+				</page>
+		
+				<page id="edit_profile_page">
+					<type>Aroos.ui.pages.editProfile.EditProfile</type>
+					<title>ویرایش پروفایل</title>
+					<image></image>
+					<content></content>
+					<links>
+						<!--Edit pass page-->
+						<link level="-1" name="" id="edit_password_page" icon=""/>
+						<!--Edit pass page-->
+						<link level="-1" name="" id="avatar_editor_page" icon=""/>
+						<!--Profile saved : No need to change the page, just back to the last page-->
+						<!--link level="1" name="" id="profile_page" icon=""/-->
+					</links>
+					<links>
+					</links>
+				</page>
+		
+					<page id="edit_password_page">
+						<type>Aroos.ui.pages.editProfile.EditPassPage</type>
+						<title>edit_pass_l</title>
+						<image></image>
+						<content></content>
+						<links>
+						</links>
+						<links>
+							<!-- No need to change the page, just back to the last page-->
+						</links>
+					</page>
+		
+			<page id="register_page">
+				<type>ui.page.RegisterPageExtend</type><!--Aroos.ui.pages.register.RegisterPage-->
+				<title>ثبت نام</title>
+				<image></image>
+				<content></content>
+				<links>
+					<link level="-2" name="" id="login_page" icon=""/>
+				</links>
+				<links>
+					<link level="-2" name="" id="avatar_editor_page" icon=""/>
+				</links>
+			</page>
+		
+				<page id="login_page">
+					<type>Aroos.ui.pages.login.LoginPage</type>
+					<title>login_l</title>
+					<image></image>
+					<content></content>
+					<links>
+						<!--0: The next page that user can see after loggin.  Important!! the level must be 0-->
+						<!--I prefer to make user see the last page-->
+							<!--link level="0" name="" id="aroos_home" icon=""/-->
+					</links>
+					<links>
+					</links>
+				</page>
+		
+				<page id="avatar_editor_page">
+					<type>Aroos.ui.pages.avatarEditor.AvatarEditor</type>
+					<title>avatar_editor_l</title>
+					<image></image>
+					<content></content>
+					<links>
+					</links>
+				</page>
+</app>

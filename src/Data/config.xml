@@ -1,0 +1,138 @@
+﻿<config>
+	<!--نسیم-->
+	<domain>http://moshaver-resane.mteamtest.ir/</domain>
+	<wsdl>/photocontestws.asmx?WSDL</wsdl>
+	
+	<restServicesDomain>http://exam.farsnews.com/api/Survey/</restServicesDomain>
+	
+	<!--http://185.83.208.175:822/api/Survey/GetSurveys-->
+	
+	
+	<skipAnimations>false</skipAnimations>
+	
+	<maximomStageWidh>768</maximomStageWidh>
+	
+	<photoRequeStsize>50</photoRequeStsize>
+	<changeSliderLinksByUserLogin>true</changeSliderLinksByUserLogin>
+	<message_body_page_id>home</message_body_page_id>
+	
+	<approveCodeRquiredToRegister>false</approveCodeRquiredToRegister>
+	
+	<loginIsNecesaryToUseApp>false</loginIsNecesaryToUseApp>
+	
+	<userImageFolderName>UserImages</userImageFolderName>
+	
+	<!--debug mode will make intro skips-->
+	<debug>false</debug>
+	
+	<firstPageId>home</firstPageId>
+	
+	<registration_page>register_page</registration_page>
+	
+	<news_content_page_id>news_content_page</news_content_page_id>
+	
+	<galleryPageId>gallery</galleryPageId>
+	<galleryInfoPageId>online_image_page</galleryInfoPageId>
+	<!--Default image editor page id from the data.xml-->
+	<galleryEditorPageId>image_editor_page</galleryEditorPageId>
+	
+	
+	<MenuHHome>0</MenuHHome> <!--منو پایین در صفحه خانه    -->
+	<MenuH>0</MenuH> <!--  منوی پایین در صفحه داخلی  -->
+	<MenuHTopHome>102</MenuHTopHome> <!--   منوی بالا در خانه -->
+	<MenuTopH>102</MenuTopH> <!--   منوی بالا در صفحه داخلی -->
+	
+	<avatarW>400</avatarW>
+	<avatarH>400</avatarH>
+	
+	<contestImageW>1024</contestImageW>
+	<contestImageH>1024</contestImageH>
+	
+	<mediaFrameSizeW>550</mediaFrameSizeW>
+	<mediaFrameSizeH>400</mediaFrameSizeH>
+	
+	<avatar_debug_location>D:/testImage.jpg</avatar_debug_location>
+	<contest_debag_file>D:/Photosphere-1.jpg</contest_debag_file>
+	<media_debag_file>D:/Photosphere-1.jpg</media_debag_file>
+	<media_debag_file_2>D:/testImage.jpg</media_debag_file_2>
+	
+	<logout_page_id>logout</logout_page_id>
+	
+	<showAcceptedImages>true</showAcceptedImages>
+	
+	<lockTheContestList>false</lockTheContestList>
+	
+	<!--show this number of contests on the contestLink menu-->
+	<contestPerLine>5</contestPerLine>
+	
+	<mediatype>txt</mediatype>
+		<mediatype_editor>naghashak_id</mediatype_editor>
+		<mediatype_editor_2>story_generator_record_text</mediatype_editor_2>
+		<mediatype_viewr>imageinfo</mediatype_viewr>
+	<mediatype2>-</mediatype2>
+		<mediatype2_editor>-</mediatype2_editor>
+		<mediatype2_editor_2>story_generator_multi_image_1</mediatype2_editor_2>
+		<mediatype2_viewr>-</mediatype2_viewr>
+	<mediatype3>-</mediatype3>
+		<mediatype3_editor>-</mediatype3_editor>
+		<mediatype3_editor_2>no_where</mediatype3_editor_2>
+		<mediatype3_viewr>-</mediatype3_viewr>
+	<mediatype4>-</mediatype4>
+		<mediatype4_editor>-</mediatype4_editor>
+		<mediatype4_editor_2>no_where</mediatype4_editor_2>
+		<mediatype4_viewr>-</mediatype4_viewr>
+	<mediatype5>-</mediatype5>
+		<mediatype5_editor>-</mediatype5_editor>
+		<mediatype5_editor_2>no_where</mediatype5_editor_2>
+		<mediatype5_viewr>-</mediatype5_viewr>
+	
+	<maximomRecordingTimeInSeconds>600</maximomRecordingTimeInSeconds>
+	
+	<cupesScore>100</cupesScore>
+	<cupsWidth>72</cupsWidth>
+	
+	<imagePopPreviewSizeWidth>600</imagePopPreviewSizeWidth>
+	<imagePopPreviewSizeHeight>400</imagePopPreviewSizeHeight>
+	
+	<mediaTitleMaxChar>50</mediaTitleMaxChar>
+	<photoTitleMaxChar>50</photoTitleMaxChar>
+	
+	<contestIconsDeltaX>45</contestIconsDeltaX>
+	<!--in miliseconds-->
+	<capturing_time>30000</capturing_time>
+	<capture_frame_rate>10</capture_frame_rate>
+	<capture_frame_w>400</capture_frame_w>
+	<capture_frame_h>400</capture_frame_h>
+	<capture_resolution>30</capture_resolution>
+	<min_pass_length>1</min_pass_length>
+	
+	<gender_male>31</gender_male>
+	<gender_female>32</gender_female>
+	
+	<ignoredChanels>1010</ignoredChanels>
+	
+	<ignoredContests>1012</ignoredContests>
+	
+	
+	<mainPageImagesChannel>1015</mainPageImagesChannel>
+	
+	
+	<linksColor>0xF04D21</linksColor>
+	
+	<ignoredNewsOnSliderMenu>162</ignoredNewsOnSliderMenu>
+	
+	
+	<video_debag_file>D:/vid--.mp4</video_debag_file>
+
+	
+	<includeNews>false</includeNews>
+	<isBetaVersion>true</isBetaVersion>
+	<changeSliderLinksByUserLogin>true</changeSliderLinksByUserLogin>
+	
+	
+	<oneSignalAppId>13b16ac2-d773-4de7-a9fe-36925786da9f</oneSignalAppId>
+	<projectId>207276513288</projectId>
+    <distriqtId>9d1e4e35b78b9b950c7b3309f01ba20daac370e6DN8MhNmWH7TV5ap/CAAN+sLSPlvn+y4wmAIMlNFOv3tqxEHCFhestgP5cXUdrEFxmjykM2efKvfxPjPKsdFNisnWAuaSeD9vH74hRPXv/esiA037UFeCiiNYzEzFxDAaLrcQE6AQ8UlDbAdTRFBNYdKhxH6fmbwP0zRBhcYSTZ3/W+n0luVqUOHhukDh3ZPtfqGVzdCv8f0ScJmwERVCYHDC8Y/sss598NWjX2BywPNUXnA8R0C1rA5387WKQXOqt/ybPYcYFnQjsP6YO3c0aWfaliJkR4iJW4tdKEuZXXdnQjK9CX4y3fGcOtGZ6wSjlp0w1HnaAtbyAIE3Qy2DQw==</distriqtId>
+<ignoredNewsOnSliderMenu></ignoredNewsOnSliderMenu>
+	
+</config>
