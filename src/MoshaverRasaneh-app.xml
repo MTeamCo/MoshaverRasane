@@ -17,8 +17,8 @@
 	</name>
 -->
 <application xmlns="http://ns.adobe.com/air/application/31.0">
-  <id>MoshaverRasaneh</id>
-  <versionNumber>1.4.1</versionNumber>
+  <id>com.mteamapps.MoshaverResane</id>
+  <versionNumber>1.4.8</versionNumber>
   <filename>MoshaverRasaneh</filename>
   <description/>
   <name>MoshaverRasaneh</name>
