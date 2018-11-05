@@ -18,8 +18,11 @@ package ui.page
 			newsList2 = Obj.get("newsList_mc2",this) ;
 			newsList2.horizontalMenu = false;
 			newsList2.changeDeltaXY(0,3);
-			newsList2.height += StageManager.stageDelta.height;
+			//newsList2.height += StageManager.stageDelta.height;
 			newsList2.setUp2('','217',null,"",null,null,GetNews.direction_desc);
+			newsList2.freezeScroll();
+			newsList2.iconsPerLine= 2;
+			newsList2.horizontalMenu=true;
 		}
 	}
 }

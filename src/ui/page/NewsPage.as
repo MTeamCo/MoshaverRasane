@@ -1,4 +1,4 @@
-package ui.page
+﻿package ui.page
 	//ui.page.NewsPage
 {
 	import flash.display.MovieClip;
@@ -18,16 +18,13 @@ package ui.page
 		public function NewsPage()
 		{
 			super();
-			//PreLoaderMC = new PreLoader();
-			//this.addChild(PreLoaderMC);
-			//PreLoaderMC.x = PicConst.pagesRect.width/2;
-			//PreLoaderMC.y = PicConst.pagesRect.height/2;
 			newsList1 = Obj.get("newsList1_mc",this) ;
-			//newsList1.horizontalMenu = false;
-			//newsList1.changeDeltaXY(0,3);
-			//Hints.show('لطفا کمی صبر کنید');
-			//newsList1.height += StageManager.stageDelta.height;
+			newsList1.horizontalMenu=false;
+			newsList1.changeDeltaXY(0,3);
 			newsList1.setUp2('','216',null,"",null,null,GetNews.direction_desc);
+			newsList1.freezeScroll();
+			newsList1.iconsPerLine= 2;
+			newsList1.horizontalMenu=true;
 			
 		}
 	}

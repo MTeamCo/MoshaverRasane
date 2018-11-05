@@ -21,13 +21,17 @@
 		public function NewsListGeneratorExtend()
 		{
 			super();
+			
+			//PreLoaderMC = Obj.findThisClass(PreLoader,this);
 			//PreLoaderMC = new PreLoader();
+			//PreLoaderMC.visible = true ;
 			//this.addChild(PreLoaderMC);
-			//PreLoaderMC.x = PicConst.pagesRect.width/2+20;
-			//PreLoaderMC.y = PicConst.pagesRect.height/2+20;
+			//PreLoaderMC.x = PicConst.pagesRect.width/2;
+			//PreLoaderMC.y = PicConst.pagesRect.height/2;
 		}
 		/*override protected function removePreLoader(event:Event):void
 		{
+			
 			//Dispatch complete event to remove preloader icon
 			dispatchCompleteEvent();
 			if(filterOnList=='' && service_getNews.data.length==0 && service_getNews.connected)
@@ -45,14 +49,14 @@
 			{
 				this.visible = true ;
 			}
-		}*/
+		}
 		
 		
 		
 		override public function dispatchCompleteEvent():void
 		{
 			this.dispatchEvent(new Event(Event.COMPLETE));
-		}
+		}*/
 		
 	}
 }

@@ -18,8 +18,9 @@ package ui.page
 			newsList4 = Obj.get("newsList_mc4",this) ;
 			newsList4.horizontalMenu = false;
 			newsList4.changeDeltaXY(0,3);
-			newsList4.height += StageManager.stageDelta.height;
+			//newsList4.height += StageManager.stageDelta.height;
 			newsList4.setUp2('','218',null,"",null,null,GetNews.direction_desc);
+			newsList4.freezeScroll();
 		}
 	}
 }

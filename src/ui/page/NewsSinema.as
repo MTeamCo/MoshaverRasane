@@ -18,8 +18,9 @@ package ui.page
 			newsList3 = Obj.get("newsList_mc3",this) ;
 			newsList3.horizontalMenu = false;
 			newsList3.changeDeltaXY(0,3);
-			newsList3.height += StageManager.stageDelta.height;
+			//newsList3.height += StageManager.stageDelta.height;
 			newsList3.setUp2('','219',null,"",null,null,GetNews.direction_desc);
+			newsList3.freezeScroll();
 		}
 	}
 }
