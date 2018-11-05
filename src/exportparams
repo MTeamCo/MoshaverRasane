@@ -1,11 +1,9 @@
 swfname=MoshaverRasaneh
 exportname=MoshaverRasaneh
-provision_dev=
+provision_dev=MoshaverResaneDev
 provision_dist=
-provision_adhoc=
-native_folder=-extdir "D:\GIT\MTeamNatives\native"
+provision_adhoc=MoshaverResaneAdHoc
 dist_xml_name=MoshaverRasaneh-app
-dev_xml_name=MoshaverRasaneh-app
+dev_xml_name=MoshaverRasaneh-withnative-app
 android_xml_name=MoshaverRasaneh-android
 contents=Data AppIconsForPublish
-ios_contents=Default.png Default@2x.png Default-568h@2x.png Default-568h-Portrait@2x.png Default-Landscape.png Default-Landscape@2x~ipad.png Default-Landscape~ipad.png Default-Portrait.png Default-Portrait@2x~ipad.png Default-Portrait~ipad.png

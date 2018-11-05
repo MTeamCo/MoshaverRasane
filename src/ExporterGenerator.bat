@@ -4,41 +4,51 @@ echo.
 title Air Exporte batch script - Saffron
 
 rem fist initializes
-set android_certificate=%certfolder%\MTeam Certification File.p12
-set ios_dev_certificate=%certfolder%\MTeam IOS Certificate_dev.p12
-set ios_dist_certificate=%certfolder%\MTeam IOS Certificate.p12
+	set android_certificate=%certfolder%\MTeam Certification File.p12
+	set ios_dev_certificate=%certfolder%\MTeam IOS Certificate_dev.p12
+	set ios_dist_certificate=%certfolder%\MTeam IOS Certificate.p12
 
- 
-set passwordfile=%certfolder%\passwords
-if exist "%passwordfile%" (
-	set /p password=<"%passwordfile%"
-)
-set certificate_pass=%password%
-if not exist exportparams (
-	if ["%aircompiler%"]==[""] (
-		goto environment_vars
-	) else (
-		set /p edit_env_var=Do you need to update your environment variables for air compiler directory and etc? press 1 to proceed.%=%
-		if [%edit_env_var%]==1 (
+	 
+	set passwordfile=%certfolder%\passwords
+	if exist "%passwordfile%" (
+		set /p password=<"%passwordfile%"
+	)
+	set certificate_pass=%password%
+	if not exist exportparams (
+		if ["%aircompiler%"]==[""] (
 			goto environment_vars
 		) else (
-			goto setswfname
+			goto ask_to_update_environment_var
 		)
+	) else (
+		goto ask_to_update_exporter_params
 	)
-)
-
-echo Export properties founded
-set goto_edit_exporter=2
-set /p goto_edit_exporter=Do you need to reset your Exoprter file? press 1 to reset.%=%
-if not %goto_edit_exporter%==1 (goto load_param_and_continue)
-echo.
-set edit_env_var=2
-set /p edit_env_var=Do you need to update your environment variables? press 1 to proceed.%=%
-if %edit_env_var%==1 (
+	
+	:ask_to_update_environment_var
+	set /p edit_env_var=Do you need to update your environment variables for air compiler directory and etc? press 8 to proceed.%=%
+	if [%edit_env_var%]==[8] (
 		goto environment_vars
 	) else (
 		goto setswfname
 	)
+	
+	
+rem control saved parameters to continue
+
+	:ask_to_update_exporter_params
+	
+	echo Export properties founded
+	set goto_edit_exporter=2
+	set /p goto_edit_exporter=Do you need to reset your Exoprter file? press 8 to reset.%=%
+	if not %goto_edit_exporter%==8 (goto load_param_and_continue)
+	echo.
+	set edit_env_var=2
+	set /p edit_env_var=Do you need to update your environment variables? press 8 to proceed.%=%
+	if %edit_env_var%==8 (
+			goto environment_vars
+		) else (
+			goto setswfname
+		)
 rem test part
 
 :environment_vars
@@ -95,10 +105,10 @@ rem get the name of the application. I have to save them all in "exportparas" fi
 	if not [%global_native_folder%]==[.] echo    *** Your global native folder is %global_native_folder%
 	set /p local_native_folder=Do you have local native folder? enter its name or pass this questin blank:%=%
 	echo.
-	if [%local_native_folder%]==[.] (
-		set native_folder=-extdir "%global_native_folder%"
-	) else (
+	if not [%local_native_folder%]==[.] (
 		set native_folder=-extdir "%local_native_folder%"
+	) else (
+		set native_folder=.
 	)
 	
 	rem local parameters
@@ -120,37 +130,47 @@ rem get the name of the application. I have to save them all in "exportparas" fi
 
 	rem local parameters
 	set contents=Data AppIconsForPublish
-	echo If you need to change iOS and Android icons, add "AppIconsForPublish-and" for android icons and "AppIconsForPublish-and" for iOS icons.
+	echo If you need to change iOS and Android icons, add "AppIconsForPublish-and" for android icons and "AppIconsForPublish-ios" for iOS icons.
 	set /p contents=These directories should embed with your application: "%contents%". Enter your own directory if you need to change them:%=%
 	if not exist AppIconsForPublish (echo YOU FORGOT TO ADD "AppIconsForPublish" FOLDER TO YOUR EXPORT FOLDER! it uses for Saffron apps)
 	if not exist Data (echo YOU FORGOT TO ADD "Data" FOLDER TO YOUR EXPORT FOLDER! it uses for Saffron apps)
 	echo.
 	
-	set ios_contents=Default.png Default@2x.png Default-568h@2x.png Default-568h-Portrait@2x.png Default-Landscape.png Default-Landscape@2x~ipad.png Default-Landscape~ipad.png Default-Portrait.png Default-Portrait@2x~ipad.png Default-Portrait~ipad.png
-	if not exist Default.png (echo YOU FORGOT TO ADD "%ios_contents%" FILES TO YOUR EXPORT FOLDER! used for ios exports)
-	echo.
-	
-	
 	rem local parameters
 	set local_ios_dev_certificate=%ios_dev_certificate%
 	echo -%local_ios_dev_certificate%
-	set /p local_ios_dev_certificate=Do you need to change your iOS "development" certificate file? enter the new target or pass this question blank%=%
-	set ios_dev_certificate=%local_ios_dev_certificate%
+	set /p local_ios_dev_certificate=Do you need to change your iOS "development" p12 certificate file? enter the new target or pass this question blank: %=%
 	echo.
+	
+	if not ["%local_ios_dev_certificate%"]==[ (
+		if ["%local_ios_dev_certificate%"]==["%local_ios_dev_certificate:.p12=%"] (
+			set local_ios_dev_certificate=%local_ios_dev_certificate%.p12
+		)
+	)
 	
 	rem local parameters
 	set local_ios_dist_certificate=%ios_dist_certificate%
 	echo -%local_ios_dist_certificate%
-	set /p local_ios_dist_certificate=Do you need to change your iOS "distribution" certificate file? enter the new target or pass this question blank%=%
-	set ios_dist_certificate=%local_ios_dist_certificate%
+	set /p local_ios_dist_certificate=Do you need to change your iOS "distribution" p12 certificate file? enter the new target or pass this question blank: %=%
 	echo.
+	
+	if not ["%local_ios_dist_certificate%"]==[ (
+		if ["%local_ios_dist_certificate%"]==["%local_ios_dist_certificate:.p12=%"] (
+			set local_ios_dist_certificate=%local_ios_dist_certificate%.p12
+		)
+	)
 	
 	rem local parameters
 	set local_android_certificate=%android_certificate%
 	echo -%local_android_certificate%
-	set /p local_android_certificate=Do you need to change your "Android" certificate file? enter the new target or pass this question blank%=%
-	set android_certificate=%local_android_certificate%
+	set /p local_android_certificate=Do you need to change your "Android" p12 certificate file? enter the new target or pass this question blank: %=%
 	echo.
+	
+	if not ["%local_android_certificate%"]==[ (
+		if ["%local_android_certificate%"]==["%local_android_certificate:.p12=%"] (
+			set local_android_certificate=%local_android_certificate%.p12
+		)
+	)
 	
 	:setpasswrod
 	
@@ -172,21 +192,28 @@ echo exportname=%exportname%>> exportparams
 echo provision_dev=%provision_dev%>> exportparams
 echo provision_dist=%provision_dist%>> exportparams
 echo provision_adhoc=%provision_adhoc%>> exportparams
-if not ["%local_native_folder%"]==[ if not ["%native_folder%"]==["%local_native_folder%"] (echo native_folder=%native_folder%>> exportparams)
+if not ["%native_folder%"]==["."] (echo native_folder=%native_folder%>> exportparams)
 echo dist_xml_name=%dist_xml_name%>> exportparams
 echo dev_xml_name=%dev_xml_name%>> exportparams
 echo android_xml_name=%android_xml_name%>> exportparams
 echo contents=%contents%>> exportparams
-echo ios_contents=%ios_contents%>> exportparams
-if not ["%local_ios_dev_certificate%"]==["%ios_dev_certificate%"] (echo ios_dev_certificate=%ios_dev_certificate%>> exportparams)
-if not ["%ios_dist_certificate%"]==["%local_ios_dist_certificate%"] (echo ios_dist_certificate=%ios_dist_certificate%>> exportparams)
-if not ["%android_certificate%"]==["%local_android_certificate%"] (echo android_certificate=%android_certificate%>> exportparams)
+rem echo ios_contents=%ios_contents%>> exportparams
+if not ["%local_ios_dev_certificate%"]==["%ios_dev_certificate%"] if not ["%local_ios_dev_certificate%"] == [""] (echo ios_dev_certificate=%local_ios_dev_certificate%>> exportparams)
+if not ["%ios_dist_certificate%"]==["%local_ios_dist_certificate%"] if not ["%local_ios_dist_certificate%"] == [""] (echo ios_dist_certificate=%local_ios_dist_certificate%>> exportparams)
+if not ["%android_certificate%"]==["%local_android_certificate%"] if not ["%local_android_certificate%"] == [""] (echo android_certificate=%local_android_certificate%>> exportparams)
 if not ["%certificate_pass%"]==["%password%"] (echo certificate_pass=%certificate_pass%>> exportparams)
+
 	
 	
 :load_param_and_continue
 rem load and save a file line by line to other place
+set native_folder=-extdir "%global_native_folder%"
+
 for /f "delims=" %%x in (exportparams) do (set %%x)
+
+	
+set ios_contents=Default~iphone.png Default@2x~iphone.png Default-568h@2x~iphone.png Default-375w-667h@2x~iphone.png Default-414w-736h@3x~iphone.png Default-Landscape-414w-736h@3x~iphone.png Default-812h@3x~iphone.png Default-Landscape-812h@3x~iphone.png Default-Portrait~ipad.png Default-Landscape~ipad.png Default-Portrait@2x~ipad.png Default-Landscape@2x~ipad.png Default-Portrait-1112h@2x.png Default-Landscape-1112h@2x.png Default-Portrait@2x.png Default-Landscape@2x.png  Assets.car
+	
 
 set ios_pass=%certificate_pass%
 set android_pass=%certificate_pass%
@@ -215,7 +242,7 @@ if not ["%provision_adhoc%"]==[ (
 	)
 ) else (set provision_adhoc=.)
 
-
+set global_manifest=%swfname%-app
 
 
 
@@ -272,7 +299,7 @@ if %os_type% == 3 goto window_export
 
 :android_export
 	if exist AppIconsForPublish-and copy "AppIconsForPublish-and" "AppIconsForPublish"
-	set /p export_type=1-with embeded air  2-whitout air  3-remote debug%=%
+	set /p export_type=1-with embeded air  3-remote debug%=%
 	
 	rem :apk-debug -connect 192.168.0.15         apk-captive-runtime
 	rem :apk � an Android package. A package produced with this target can only be installed on an Android device, not an emulator.
@@ -308,6 +335,21 @@ if %os_type% == 3 goto window_export
 :ios_export
 	if exist AppIconsForPublish-ios copy "AppIconsForPublish-ios" "AppIconsForPublish"
 	set /p export_type=1-Dev  2-Dist  3-remote debug 4-adHoc%=%
+	
+	
+	:controlioscontent
+	if not exist Default~iphone.png (
+		echo YOU FORGOT TO ADD "%ios_contents%" FILES TO YOUR EXPORT FOLDER! used for ios exports. add them to your directory and press any key...
+		pause
+		goto controlioscontent;
+	)
+	cls
+	if not exist Assets.car (echo YOU FORGOT TO ADD "Assets.car" FILE TO YOUR PROJECT! send your icon to this portal and make one to contiue...
+		echo http://www.applicationloader.net/appuploader/icontool.php
+		start "" http://www.applicationloader.net/appuploader/icontool.php
+		pause
+		goto controlioscontent;
+	)
 
 	if %export_type% == 1 goto iosdev
 	if %export_type% == 2 goto iosdist
@@ -345,10 +387,10 @@ if %os_type% == 3 goto window_export
 :window_export
 
 	:preview
-	@echo on
 	rem set dAA3=1024x768:1024x768
 	rem debugger V
-	"%aircompiler%\bin\adl.exe" -profile mobileDevice -screensize "%global_manifest%"
+	@echo on
+	"%aircompiler%\bin\adl.exe" -profile mobileDevice "%global_manifest%.xml"
 	pause
 	exit
 
