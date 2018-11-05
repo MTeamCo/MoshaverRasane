@@ -23,8 +23,8 @@
 			<link level="1" name="ثبت نام" id="register_page" icon="Data/images/menu/2.png"/>
 			<link level="1" name="تماس با ما" id="tamas_page" icon="Data/images/menu/phone-call2.png"/>
 			<link level="1" name="درباره ما" id="about_page" icon="Data/images/menu/phone-call2.png"/>
-			<link level="1" name="خبرگزاری ها" id="" icon="Data/images/menu/world-news2.png"/>
-			<link level="1" name="خبرنگاران" id="" icon="Data/images/menu/world-news2.png"/>
+			<link level="1" name="خبرگزاری ها" id="khabarnegaran_page2" icon="Data/images/menu/world-news2.png"/>
+			<link level="1" name="خبرنگاران" id="khabarnegaran_page" icon="Data/images/menu/world-news2.png"/>
 			<link level="1" name="درخواست خبرگزاری" id="contact_page" icon="Data/images/menu/world-news2.png"/>
 			<link level="1" name="درباره توسعه دهنده" id="developer_static_page" icon="Data/images/menu/khane.png"/>
 			
@@ -34,8 +34,8 @@
 			<link level="1" name="پروفایل" id="profile_page" icon="Data/images/menu/2.png"/>
 			<link level="1" name="تماس با ما" id="tamas_page" icon="Data/images/menu/phone-call2.png"/>
 			<link level="1" name="درباره ما" id="about_page" icon="Data/images/menu/phone-call2.png"/>
-			<link level="1" name="خبرگزاری ها" id="" icon="Data/images/menu/world-news2.png"/>
-			<link level="1" name="خبرنگاران" id="" icon="Data/images/menu/world-news2.png"/>
+			<link level="1" name="خبرگزاری ها" id="khabarnegaran_page2" icon="Data/images/menu/world-news2.png"/>
+			<link level="1" name="خبرنگاران" id="khabarnegaran_page" icon="Data/images/menu/world-news2.png"/>
 			<link level="1" name="درخواست خبرگزاری" id="contact_page" icon="Data/images/menu/world-news2.png"/>
 			<link level="1" name="درباره توسعه دهنده" id="developer_static_page" icon="Data/images/menu/khane.png"/>
 		</links>
@@ -75,6 +75,23 @@
 		<page id="khabarnegaran_page">
 				<type>ui.page.SearchPageExtend</type>
 				<title>خبرنگاران</title>
+				<image></image>
+				<content></content>
+				<links></links>
+				<links>
+					<!--0: searched photo s page-->
+					<link level="" name="" id="searched_images_page" icon=""/>
+					<!--1: searched users page-->
+					<link level="" name="" id="searched_users_page" icon=""/>
+					<!--1: searched news page-->
+					<link level="" name="" id="searched_news_page" icon=""/>
+				</links>
+			</page>
+			
+			
+				<page id="khabarnegaran_page2">
+				<type>ui.page.SearchPageExtend</type>
+				<title>خبرگزاران</title>
 				<image></image>
 				<content></content>
 				<links></links>
