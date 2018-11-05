@@ -156,7 +156,7 @@ package ui.page
 			}
 			
 			dynamicList.height = PicConst.pagesRect.height-dynamicList.y ;
-			inputTF.text='نام مورد نظر خود را وارد کنید';
+			inputTF.text='';
 			FarsiInputCorrection.setUp(inputTF,null,true,true,false,true,true,true,ReturnKeyLabel.SEARCH,searchFunction);
 			
 			
