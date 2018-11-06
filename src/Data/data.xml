@@ -73,7 +73,7 @@
 	
 	
 		<page id="khabarnegaran_page">
-				<type>ui.page.SearchPageExtend</type>
+				<type>SearchPageExtend2</type>
 				<title>خبرنگاران</title>
 				<image></image>
 				<content></content>
@@ -90,8 +90,8 @@
 			
 			
 				<page id="khabarnegaran_page2">
-				<type>ui.page.SearchPageExtend</type>
-				<title>خبرگزاران</title>
+				<type>SearchPageExtend1</type>
+				<title>خبرگزاری ها</title>
 				<image></image>
 				<content></content>
 				<links></links>
