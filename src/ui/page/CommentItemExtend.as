@@ -95,10 +95,10 @@ package ui.page
 				comment.CreatedDate = comment2.ActionDate ;
 			}
 			
-			TextPutter.onTextArea(senderTitleTF,'-',true,true,false,0,false,false);
+			TextPutter.onTextArea(senderTitleTF,'-',true,true,false,0,false,false,-1);
 			var deltaY:Number = senderTitleContainer.height ;
 			
-			TextPutter.onTextArea(senderTitleTF,comment.UserTitle,true,true,false,0,false,false);
+			TextPutter.onTextArea(senderTitleTF,comment.UserTitle,true,true,false,0,false,false,-1);
 			var showComment:Boolean = true ;
 			if(comment.FileName!='')
 			{
@@ -161,7 +161,7 @@ package ui.page
 			}
 			
 			if(showComment)
-				TextPutter.onTextArea(commentText,comment.Comment,true,true,false,0,true);
+				TextPutter.onTextArea(commentText,comment.Comment,true,true,false,0,true,false,-1);
 			deltaY = Math.max(0,Math.max(senderTitleContainer.height,commentContainer.height)-deltaY) ;
 			
 			backMC.height += deltaY;
@@ -216,6 +216,7 @@ package ui.page
 		{
 			// TODO Auto-generated method stub
 			selectTime = getTimer();
+			TextPutter.onTextArea(commentText,comment.Comment,true,false,false,0,true,false,-1,true);
 		}
 		
 		/*protected function somthingSelected(event:MouseEvent):void
@@ -240,6 +241,7 @@ package ui.page
 		
 		override public function imSelected(event:MouseEvent=null):void
 		{
+			
 			if(comment.FileName!='')
 			{
 				if(imPlaying)
