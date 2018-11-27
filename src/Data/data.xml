@@ -63,7 +63,14 @@
 		<page id="newkhabargozarha">
 				<type>ui.page.NewsListGeneratorKHabargozar</type>
 				<title></title>
-				<content align="1" x='' y='' w='750'>0</content>
+				<content align="1" x='' y='' w='750'></content>
+		</page>
+		
+		
+		<page id="newkhabarnegaran">
+				<type>ui.page.NewsListkhabarnegaran</type>
+				<title></title>
+				<content align="1" x='' y='' w='750'></content>
 		</page>
 
 	
