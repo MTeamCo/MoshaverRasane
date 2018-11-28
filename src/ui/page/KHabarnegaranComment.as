@@ -5,6 +5,9 @@ package ui.page
 	
 	import ServiceCommentKHabarnegaran.GetOnlyComment;
 	
+	import appManager.event.AppEventContent;
+	
+	import contents.Contents;
 	import contents.LinkData;
 	import contents.PageData;
 	import contents.alert.Alert;
@@ -45,6 +48,11 @@ package ui.page
 			{	
 				dynamiclink.setUp(service_onlycomment.pageData());
 			  //Alert.show('Title:'+service_onlycomment.data[i].Title);
+			}
+			if (service_onlycomment.data.length==0)
+			{
+				Hints.show('محتوایی وجود ندارد');
+				this.dispatchEvent(new AppEventContent(Contents.homeLink));
 			}
 			PreLoaderMC.visible = false ;
 		}
