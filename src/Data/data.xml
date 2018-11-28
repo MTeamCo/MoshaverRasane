@@ -23,7 +23,7 @@
 			<link level="1" name="ثبت نام" id="register_page" icon="Data/images/menu/2.png"/>
 			<link level="1" name="تماس با ما" id="tamas_page" icon="Data/images/menu/phone-call2.png"/>
 			<link level="1" name="درباره ما" id="about_page" icon="Data/images/menu/phone-call2.png"/>
-			<link level="1" name="خبرگزاری ها" id="khabarnegaran_page2" icon="Data/images/menu/world-news2.png"/>
+			<link level="1" name="صاحبین خبر" id="khabarnegaran_page2" icon="Data/images/menu/world-news2.png"/>
 			<link level="1" name="خبرنگاران" id="khabarnegaran_page" icon="Data/images/menu/world-news2.png"/>
 			<link level="1" name="درخواست خبرگزاری" id="contact_page" icon="Data/images/menu/world-news2.png"/>
 			<link level="1" name="درباره توسعه دهنده" id="developer_static_page" icon="Data/images/menu/khane.png"/>
@@ -34,7 +34,7 @@
 			<link level="1" name="پروفایل" id="profile_page" icon="Data/images/menu/2.png"/>
 			<link level="1" name="تماس با ما" id="tamas_page" icon="Data/images/menu/phone-call2.png"/>
 			<link level="1" name="درباره ما" id="about_page" icon="Data/images/menu/phone-call2.png"/>
-			<link level="1" name="خبرگزاری ها" id="khabarnegaran_page2" icon="Data/images/menu/world-news2.png"/>
+			<link level="1" name="صاحبین خبر" id="khabarnegaran_page2" icon="Data/images/menu/world-news2.png"/>
 			<link level="1" name="خبرنگاران" id="khabarnegaran_page" icon="Data/images/menu/world-news2.png"/>
 			<link level="1" name="درخواست خبرگزاری" id="contact_page" icon="Data/images/menu/world-news2.png"/>
 			<link level="1" name="درباره توسعه دهنده" id="developer_static_page" icon="Data/images/menu/khane.png"/>
