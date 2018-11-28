@@ -68,7 +68,7 @@
 		
 		
 		<page id="newkhabarnegaran">
-				<type>ui.page.NewsListkhabarnegaran</type>
+				<type>ui.page.KHabarnegaranComment</type>
 				<title></title>
 				<content align="1" x='' y='' w='750'></content>
 		</page>
