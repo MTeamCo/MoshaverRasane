@@ -308,7 +308,7 @@
 		public function loadFirstNewsRequest():void
 		{
 			
-			service_getNews.load(currentTitle,currentBaseId,0,newsPageSize,currentIsSpecial,currentSearchOrder,currentOrderDirection,myfavorite,SearchPhotographerLinkItem.userid);
+			service_getNews.load(currentTitle,currentBaseId,0,newsPageSize,currentIsSpecial,currentSearchOrder,currentOrderDirection,myfavorite,LinkItemKHabargozaran.userid);
 		}
 		
 		/**Filtere the news list on this string*/
@@ -405,7 +405,7 @@
 		{
 			trace("**** newsIndex : "+newsIndex);
 			
-			sesrvice_getOtherNews.load(currentTitle,currentBaseId,newsIndex,newsPageSize,currentIsSpecial,currentSearchOrder,currentOrderDirection,false,SearchPhotographerLinkItem.userid);
+			sesrvice_getOtherNews.load(currentTitle,currentBaseId,newsIndex,newsPageSize,currentIsSpecial,currentSearchOrder,currentOrderDirection,false,LinkItemKHabargozaran.userid);
 			
 			
 		}
