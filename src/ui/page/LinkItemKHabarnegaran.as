@@ -1,16 +1,22 @@
 package ui.page
 	//ui.page.LinkItemKHabarnegaran
 {
-	import contents.displayPages.LinkItem;
+
+	
 	import appManager.displayContentElemets.TitleText;
 	import appManager.event.AppEventContent;
+	
 	import contents.LinkData;
 	import contents.alert.Alert;
+	import contents.displayPages.LinkItem;
+	
 	import flash.events.MouseEvent;
 	import flash.net.URLRequest;
 	import flash.net.navigateToURL;
+	
 	import picContest.services.types.VUser;
 	import picContest.ui.elements.Avatar;
+
 	public class LinkItemKHabarnegaran extends LinkItem
 	{
 		private var avatar:Avatar ;
@@ -32,24 +38,15 @@ package ui.page
 		override public function setUp(linkData:LinkData):void
 		{
 			myUser = linkData.dynamicData as VUser ;
-			/*if(sentPhotos)
-			{
-			myUser = linkData.dynamicData as VUser ;
-			sentPhotos.text = myUser.TotalPhotos ;
-			
-			}*/
-			
 			avatar.loadImage(linkData.iconURL);
 			userName.text = linkData.name ;
-			//myLinkData = linkData;
-			
-			
 		}
 		override public function imSelected(event:MouseEvent=null):void
 		{
 			userid = myUser.UserId;
 			var linkdata:LinkData = new LinkData();
 			linkdata.id = 'newkhabarnegaran';
+			//linkdata.dynamicData = myUser;
 			linkdata.level = -1;
 			this.dispatchEvent(new AppEventContent(linkdata));
 			
