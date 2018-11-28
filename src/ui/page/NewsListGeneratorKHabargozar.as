@@ -77,7 +77,7 @@
 		public function NewsListGeneratorKHabargozar()
 		{
 			super();
-			iconsPerLine = 2;
+			iconsPerLine = 1;
 			//iconsPerLine = 2;
 			
 			//setRevertListX = true;
