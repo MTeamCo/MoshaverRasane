@@ -38,9 +38,9 @@ package ServiceCommentKHabarnegaran
 		{
 			super("GetOnlyComment", offlineDataIsOK_v, justLoadOfline_v, maximomOfflineData);
 		}
-		public function load(UserId:String=''):void
+		public function load(UserId:String='',LanguageBaseId:int=11):void
 		{
-			super.loadParams(UserId);
+			super.loadParams(UserId,LanguageBaseId);
 		}
 		override protected function manageData(pureData:String):Boolean
 		{
