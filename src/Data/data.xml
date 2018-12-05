@@ -107,7 +107,7 @@
 				<page id="khabarnegaran_page2">
 				<!--SearchPageExtend1-->
 				<type>ui.page.SearchPhotographersResultPageExtend</type>
-				<title>خبرگزاری ها</title>
+				<title>صاحبین خبر</title>
 				<image></image>
 				<content></content>
 				<links></links>
@@ -898,7 +898,7 @@
 		
 		
 			<page id="profile_page">
-				<type>Aroos.ui.pages.profile.UserProfile</type>
+				<type>ui.page.UserProfileExtend2</type>
 				<title>حساب کاربری</title>
 				<image></image>
 				<content></content>
