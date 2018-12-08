@@ -5,6 +5,7 @@
 	
 	import appManager.event.AppEvent;
 	import appManager.event.AppEventContent;
+	import appManager.event.TitleEvent;
 	
 	import contents.Contents;
 	import contents.LinkData;
@@ -18,13 +19,17 @@
 	import flash.display.Sprite;
 	import flash.events.Event;
 	import flash.events.EventDispatcher;
+	import flash.events.TimerEvent;
 	import flash.system.System;
 	import flash.utils.setTimeout;
 	
 	import picContest.Pic;
 	import picContest.services.types.VNews;
+	import picContest.services.types.VUser;
 	import picContest.services.webCallerNews.GetNews;
 	import picContest.ui.elements.PreLoader;
+	
+	import stageManager.StageManager;
 	
 	import webService.webCallers.WebServiceCaller;
 	
@@ -67,6 +72,8 @@
 		public var savedPageData:PageData ;
 		/**Used to store the news list ids*/
 		private var lastNewsListId:String;
+		
+		private var data:VUser;
 		
 		
 		/** videoFilter: 0>no difrent, 1>Only news those had video, 2>Only news whith out videos*/
@@ -255,11 +262,12 @@
 		
 		override public function setUp(pageData:PageData):void
 		{
+			
+			data = pageData.dynamicData as VUser;
+			this.dispatchEvent(new TitleEvent(data.UserTitle));
 			trace("*** *** ***** Load the news");
 			myPageData = savedPageData = pageData;
 			setUp2();
-			//super.setUp(pageData);
-			
 		}
 		
 		/**You can set more than one newsBase Id with , between ids : 1,2,12,...<br>
@@ -356,7 +364,7 @@
 			sesrvice_getOtherNews.addEventListener(Event.UNLOAD,reloadeService);
 			
 			showList();
-			
+		
 			/*if(firstNews.links1.length==0)
 			{
 			//No news
