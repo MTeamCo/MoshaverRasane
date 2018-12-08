@@ -3,6 +3,7 @@
 {
 	import Aroos.ui.pages.search.SearchPhotographersResultPage;
 	
+	import appManager.displayContentElemets.TitleText;
 	import appManager.event.AppEventContent;
 	
 	import contents.LinkData;
@@ -18,6 +19,7 @@
 	import picContest.Pic;
 	import picContest.PicConst;
 	import picContest.PicEvent;
+	import picContest.services.types.VUser;
 	import picContest.services.webCaller.GetPhotograghers;
 	import picContest.ui.elements.PreLoader;
 	
@@ -26,10 +28,12 @@
 		private var dynamiclink:DynamicLinks ;
 		private var profile:GetPhotograghers;
 		private var PreLoaderMC:PreLoader ;
+		private var data:VUser;
 	//	public static var userid:String;
 		public function SearchPhotographersResultPageExtend()
 		{
 			super();
+			
 			PreLoaderMC = new PreLoader();
 			this.addChild(PreLoaderMC);
 			PreLoaderMC.x = PicConst.pagesRect.width/2;
@@ -46,6 +50,7 @@
 			{	
 					
 				dynamiclink.setUp(profile.pageData());
+				
 			}
 			//userid = profile.data[i].UserId;
 			
@@ -60,6 +65,9 @@
 			profile.load('0','',24);
 			dynamiclink.changeDeltaXY(0,0);
 			dynamiclink.height = PicConst.pagesRect.height-70;
+			//Alert.show('1:'+data.NewsCount);
+			//newscount.text=String(data.NewsCount);
+
 		}
 	}
 }
