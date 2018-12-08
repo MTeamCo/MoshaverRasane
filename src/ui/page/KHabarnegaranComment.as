@@ -6,6 +6,7 @@ package ui.page
 	import ServiceCommentKHabarnegaran.GetOnlyComment;
 	
 	import appManager.event.AppEventContent;
+	import appManager.event.TitleEvent;
 	
 	import contents.Contents;
 	import contents.LinkData;
@@ -19,6 +20,7 @@ package ui.page
 	
 	import picContest.Pic;
 	import picContest.PicConst;
+	import picContest.services.types.VUser;
 	import picContest.ui.elements.PreLoader;
 	
 	import webService.webCallers.WebServiceCaller;
@@ -28,6 +30,7 @@ package ui.page
 		private var dynamiclink:DynamicLinks ;
 		private var service_onlycomment:GetOnlyComment;
 		private var PreLoaderMC:PreLoader ;
+		private var data:VUser;
 		public function KHabarnegaranComment()
 		{
 			super();
@@ -62,6 +65,8 @@ package ui.page
 		}
 		public function setUp(pageData:PageData):void
 		{
+			data = pageData.dynamicData as VUser;
+			this.dispatchEvent(new TitleEvent(data.UserTitle));
 			service_onlycomment.load(LinkItemKHabarnegaran.userid);
 			dynamiclink.height = PicConst.pagesRect.height-70;
 		}
