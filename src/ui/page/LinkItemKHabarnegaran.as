@@ -27,10 +27,12 @@ package ui.page
 		
 		private var myUser:VUser ;
 		
+		private var commentcount:TitleText;
 		public static var userid:String;
 		public function LinkItemKHabarnegaran()
 		{
 			super();
+			commentcount = Obj.get('commentcount_mc',this);
 			avatar = Obj.findThisClass(Avatar,this,true);
 			userName = Obj.get("user_name_txt",this);
 			sentPhotos = Obj.get("user_sent_photo_txt",this);
@@ -40,13 +42,14 @@ package ui.page
 			myUser = linkData.dynamicData as VUser ;
 			avatar.loadImage(linkData.iconURL);
 			userName.text = linkData.name ;
+			commentcount.setUp(String(myUser.CommentCount));
 		}
 		override public function imSelected(event:MouseEvent=null):void
 		{
 			userid = myUser.UserId;
 			var linkdata:LinkData = new LinkData();
 			linkdata.id = 'newkhabarnegaran';
-			//linkdata.dynamicData = myUser;
+			linkdata.dynamicData = myUser;
 			linkdata.level = -1;
 			this.dispatchEvent(new AppEventContent(linkdata));
 			
