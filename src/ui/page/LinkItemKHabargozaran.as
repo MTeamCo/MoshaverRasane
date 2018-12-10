@@ -26,7 +26,6 @@
 		
 		public static var userid:String;
 		private var newscount:TitleText;
-		private var data:VUser;
 		public function LinkItemKHabargozaran()
 		{
 			super();
@@ -37,10 +36,10 @@
 		}
 		override public function setUp(linkData:LinkData):void
 		{
-			data = linkData.dynamicData as VUser ;
+			myUser = linkData.dynamicData as VUser ;
 			avatar.loadImage(linkData.iconURL);
 			userName.text = linkData.name ;
-			newscount.setUp(String(data.NewsCount));
+			newscount.setUp(String(myUser.NewsCount));
 			
 		}
 		override public function imSelected(event:MouseEvent=null):void
