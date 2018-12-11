@@ -117,12 +117,12 @@
 </dict>
 ]]></InfoAdditions>
     <Entitlements><![CDATA[
+<key>get-task-allow</key>
+<true/>
 <key>application-identifier</key>
 <string>null.com.mteamapps.MoshaverResane</string>
 <key>aps-environment</key>
-<string>development</string>
-<key>get-task-allow</key>
-<true/>
+<string>production</string>
 <key>keychain-access-groups</key>
 <array>
   <string>null.com.mteamapps.MoshaverResane</string>
