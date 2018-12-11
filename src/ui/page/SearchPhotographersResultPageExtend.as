@@ -48,8 +48,7 @@
 		{
 			for(var i:int = 0 ; i< profile.data.length ; i++)
 			{	
-					
-				dynamiclink.setUp(profile.pageData());
+				dynamiclink.setUp(profile.pageData(1));
 				
 			}
 			//userid = profile.data[i].UserId;
@@ -64,9 +63,7 @@
 		{
 			profile.load('0','',24);
 			dynamiclink.changeDeltaXY(0,0);
-			dynamiclink.height = PicConst.pagesRect.height-70;
-			//Alert.show('1:'+data.NewsCount);
-			//newscount.text=String(data.NewsCount);
+			dynamiclink.height = PicConst.pagesRect.height-100;
 
 		}
 	}
