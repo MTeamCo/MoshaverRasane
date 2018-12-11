@@ -45,11 +45,11 @@
 		override public function imSelected(event:MouseEvent=null):void
 		{
 			userid = myUser.UserId;
-			var linkdata:LinkData = new LinkData();
-			linkdata.id = 'newkhabargozarha';
-			linkdata.level = -1;
-			linkdata.dynamicData = myUser;
-			this.dispatchEvent(new AppEventContent(linkdata));
+			var linkdataa:LinkData = new LinkData();
+			linkdataa.id = 'newkhabargozarha';
+			linkdataa.level = -1;
+			linkdataa.dynamicData = myUser;
+			this.dispatchEvent(new AppEventContent(linkdataa));
 			
 		}
 		
