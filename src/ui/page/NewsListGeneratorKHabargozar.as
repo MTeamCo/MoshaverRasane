@@ -263,8 +263,8 @@
 		override public function setUp(pageData:PageData):void
 		{
 			
-			//data = pageData.dynamicData as VUser;
-			//this.dispatchEvent(new TitleEvent(data.UserTitle));
+			data = pageData.dynamicData as VUser;
+			this.dispatchEvent(new TitleEvent(data.UserTitle));
 			trace("*** *** ***** Load the news");
 			myPageData = savedPageData = pageData;
 			setUp2();
