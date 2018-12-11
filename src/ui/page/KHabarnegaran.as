@@ -4,6 +4,7 @@
 	import Aroos.ui.pages.search.SearchPage;
 	
 	import contents.PageData;
+	import contents.alert.Alert;
 	import contents.displayPages.DynamicLinks;
 	import contents.interFace.DisplayPageInterface;
 	
@@ -33,14 +34,10 @@
 		}
 		protected function photoGraphersLoaded(event:Event):void
 		{
-			
 			for(var i:int = 0 ; i< profile.data.length ; i++)
 			{	
 				
-				dynamiclink.setUp(profile.pageData());
-				/*if (profile.data[i].UserTypeBaseId=='24')
-				{
-				}*/
+				dynamiclink.setUp(profile.pageData(2));
 			}
 			PreLoaderMC.visible = false ;
 		}
@@ -51,6 +48,7 @@
 		public function setUp(pageData:PageData):void
 		{
 			//Alert.show('test');
+			
 			profile.load('0','',23);
 			
 			dynamiclink.changeDeltaXY(0,0);
