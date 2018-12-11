@@ -15,11 +15,14 @@
 	import picContest.services.webCaller.GetPhotograghers;
 	import picContest.ui.elements.PreLoader;
 	
+	import popForm.PopField;
+	
 	public class KHabarnegaran extends MovieClip implements DisplayPageInterface
 	{
 		private var dynamiclink:DynamicLinks ;
 		private var profile:GetPhotograghers;
 		private var PreLoaderMC:PreLoader ;
+		private var searchFieldTF:PopField ;
 		public function KHabarnegaran()
 		{
 			super();
@@ -31,14 +34,11 @@
 			profile = new GetPhotograghers();
 			profile.addEventListener(Event.COMPLETE,photoGraphersLoaded);
 			profile.addEventListener(Event.UNLOAD,reloadPhotoGraphers);
+			searchFieldTF = Obj.get("search_mc",this);
 		}
 		protected function photoGraphersLoaded(event:Event):void
 		{
-			for(var i:int = 0 ; i< profile.data.length ; i++)
-			{	
-				
-				dynamiclink.setUp(profile.pageData(2));
-			}
+			dynamiclink.setUp(profile.pageData(2));
 			PreLoaderMC.visible = false ;
 		}
 		protected function reloadPhotoGraphers(event:Event):void
@@ -48,7 +48,11 @@
 		public function setUp(pageData:PageData):void
 		{
 			//Alert.show('test');
-			
+			if(searchFieldTF)
+			{
+				searchFieldTF.setUp('جستجو','');
+				searchFieldTF.addEventListener(Event.RENDER,aFiltereEntered);
+			}
 			profile.load('0','',23);
 			
 			dynamiclink.changeDeltaXY(0,0);
@@ -58,5 +62,11 @@
 			
 			
 		}
+		protected function aFiltereEntered(event:Event):void
+		{
+			dynamiclink.setUp(profile.pageData(2,searchFieldTF.text));
+			
+		}
+		
 	}
 }

@@ -23,13 +23,15 @@
 	import picContest.services.webCaller.GetPhotograghers;
 	import picContest.ui.elements.PreLoader;
 	
+	import popForm.PopField;
+	
 	public class SearchPhotographersResultPageExtend extends MovieClip implements DisplayPageInterface
 	{
 		private var dynamiclink:DynamicLinks ;
 		private var profile:GetPhotograghers;
 		private var PreLoaderMC:PreLoader ;
 		private var data:VUser;
-	//	public static var userid:String;
+		private var searchFieldTF:PopField;
 		public function SearchPhotographersResultPageExtend()
 		{
 			super();
@@ -42,6 +44,7 @@
 			profile = new GetPhotograghers();
 			profile.addEventListener(Event.COMPLETE,photoGraphersLoaded);
 			profile.addEventListener(Event.UNLOAD,reloadPhotoGraphers);
+			searchFieldTF = Obj.get("search_mc",this);
 		}
 		
 		protected function photoGraphersLoaded(event:Event):void
@@ -61,10 +64,20 @@
 		}
 		public function setUp(pageData:PageData):void
 		{
+			if(searchFieldTF)
+			{
+				searchFieldTF.setUp('جستجو','');
+				searchFieldTF.addEventListener(Event.RENDER,aFiltereEntered);
+			}
 			profile.load('0','',24);
 			dynamiclink.changeDeltaXY(0,0);
 			dynamiclink.height = PicConst.pagesRect.height-100;
 
+		}
+		protected function aFiltereEntered(event:Event):void
+		{
+			dynamiclink.setUp(profile.pageData(2,searchFieldTF.text));
+			
 		}
 	}
 }
