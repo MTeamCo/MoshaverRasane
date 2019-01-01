@@ -21,22 +21,22 @@
 		<links>
 			<link level="1" name="صفحه اصلی" id="home" icon="Data/images/menu/khane.png"/>
 			<link level="1" name="ثبت نام" id="register_page" icon="Data/images/menu/2.png"/>
-			<link level="1" name="تماس با ما" id="tamas_page" icon="Data/images/menu/phone-call2.png"/>
-			<link level="1" name="درباره ما" id="about_page" icon="Data/images/menu/phone-call2.png"/>
-			<link level="1" name="صاحبین خبر" id="khabarnegaran_page2" icon="Data/images/menu/world-news2.png"/>
+			<link level="1" name="صاحبان خبر" id="khabarnegaran_page2" icon="Data/images/menu/world-news2.png"/>
 			<link level="1" name="خبرنگاران" id="khabarnegaran_page" icon="Data/images/menu/world-news2.png"/>
 			<link level="1" name="درخواست خبرگزاری" id="contact_page" icon="Data/images/menu/world-news2.png"/>
+			<link level="1" name="تماس با ما" id="tamas_page" icon="Data/images/menu/phone-call2.png"/>
+			<link level="1" name="درباره ما" id="about_page" icon="Data/images/menu/phone-call2.png"/>
 			<link level="1" name="درباره توسعه دهنده" id="developer_static_page" icon="Data/images/menu/khane.png"/>
 			
 		</links>
 		<links>
 			<link level="1" name="صفحه اصلی" id="home" icon="Data/images/menu/khane.png"/>
 			<link level="1" name="پروفایل" id="profile_page" icon="Data/images/menu/2.png"/>
-			<link level="1" name="تماس با ما" id="tamas_page" icon="Data/images/menu/phone-call2.png"/>
-			<link level="1" name="درباره ما" id="about_page" icon="Data/images/menu/phone-call2.png"/>
-			<link level="1" name="صاحبین خبر" id="khabarnegaran_page2" icon="Data/images/menu/world-news2.png"/>
+			<link level="1" name="صاحبان خبر" id="khabarnegaran_page2" icon="Data/images/menu/world-news2.png"/>
 			<link level="1" name="خبرنگاران" id="khabarnegaran_page" icon="Data/images/menu/world-news2.png"/>
 			<link level="1" name="درخواست خبرگزاری" id="contact_page" icon="Data/images/menu/world-news2.png"/>
+			<link level="1" name="تماس با ما" id="tamas_page" icon="Data/images/menu/phone-call2.png"/>
+			<link level="1" name="درباره ما" id="about_page" icon="Data/images/menu/phone-call2.png"/>
 			<link level="1" name="درباره توسعه دهنده" id="developer_static_page" icon="Data/images/menu/khane.png"/>
 		</links>
 	</page>
@@ -107,7 +107,7 @@
 				<page id="khabarnegaran_page2">
 				<!--SearchPageExtend1-->
 				<type>ui.page.SearchPhotographersResultPageExtend</type>
-				<title>صاحبین خبر</title>
+				<title>صاحبان خبر</title>
 				<image></image>
 				<content></content>
 				<links></links>
@@ -465,7 +465,7 @@
 		
 		
 		<page id="news_page_reverted">
-		<type>NewsPageExtend</type>
+		<type>ui.page.ExtendedNewsPage</type>
 		<title></title>
 		<content></content>
 	</page>
@@ -473,23 +473,23 @@
 	
 	
 		<page id="akhbarfanavari_page">
-		<type>NewsPageExtend</type>
+		<type>ui.page.ExtendedNewsPage</type>
 		<title>فناوری</title>
 		<content>217</content>
 	</page>
 	
 	<page id="akhbartajasomi_page">
-		<type>NewsPageExtend</type>
+		<type>ui.page.ExtendedNewsPage</type>
 		<title>تجسمی</title>
 		<content>216</content>
 	</page>
 	<page id="akhbarmusic_page">
-		<type>NewsPageExtend</type>
+		<type>ui.page.ExtendedNewsPage</type>
 		<title>موسیقی</title>
 		<content>218</content>
 	</page>
 	<page id="akhbarcinema_page">
-		<type>NewsPageExtend</type>
+		<type>ui.page.ExtendedNewsPage</type>
 		<title>سینما</title>
 		<content>219</content>
 	</page>
