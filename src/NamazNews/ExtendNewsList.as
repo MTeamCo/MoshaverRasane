@@ -8,7 +8,7 @@ package NamazNews
 		public function ExtendNewsList()
 		{
 			super();
-			iconsPerLine = 2;
+			iconsPerLine = 1;
 		}
 		
 	}
